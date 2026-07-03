@@ -3,117 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sebességmérő App</title>
+    <title>Sebességmérő App - V2</title>
     <style>
-        /* Alapvető beállítások */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; color: #333; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { max-width: 800px; width: 100%; text-align: center; background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        h1 { font-size: 2.5em; color: #222; margin-bottom: 10px; }
+        .subtitle { font-size: 1.2em; color: #666; margin-bottom: 30px; }
+        
+        /* Új V2 szekció stílusa */
+        .v2-section { background: #e8f5e9; padding: 20px; border-radius: 12px; margin-bottom: 40px; text-align: left; }
+        .v2-section h2 { color: #2e7d32; margin-top: 0; }
+        
+        .features { text-align: left; margin: 0 auto 40px auto; max-width: 500px; line-height: 1.8; }
+        .features li { list-style-type: none; padding-left: 30px; position: relative; margin-bottom: 8px; }
+        .features li::before { content: "✔️"; position: absolute; left: 0; color: #4CAF50; }
 
-        /* Fejléc és fő tartalom */
-        .container {
-            max-width: 800px;
-            width: 90%;
-            margin-top: 80px;
-            text-align: center;
-            background: white;
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            color: #222;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            font-size: 1.2em;
-            color: #666;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        /* Tulajdonságok listája */
-        .features {
-            text-align: left;
-            margin: 0 auto 40px auto;
-            max-width: 400px;
-            font-size: 1.1em;
-            line-height: 1.8;
-        }
-
-        .features li {
-            list-style-type: none;
-            padding-left: 30px;
-            position: relative;
-        }
-
-        .features li::before {
-            content: "✔️";
-            position: absolute;
-            left: 0;
-            top: 0;
-            color: #4CAF50;
-        }
-
-        /* Letöltés gomb */
-        .download-btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            padding: 16px 32px;
-            font-size: 1.2em;
-            font-weight: bold;
-            border-radius: 8px;
-            transition: background-color 0.3s ease;
-        }
-
-        .download-btn:hover {
-            background-color: #45a049;
-        }
-
-        /* Lábjegyzet */
-        .footer {
-            margin-top: 40px;
-            color: #888;
-            font-size: 0.9em;
-        }
+        .download-btn { display: inline-block; background-color: #4CAF50; color: white; text-decoration: none; padding: 16px 32px; font-size: 1.2em; font-weight: bold; border-radius: 8px; }
+        .download-btn:hover { background-color: #45a049; }
+        .footer { margin-top: 40px; color: #888; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div style="font-size: 60px; margin-bottom: -10px;">⏱️</div>
-        
         <h1>Sebességmérő App</h1>
-        <p class="subtitle">
-            Egy letisztult, GPS-alapú Android alkalmazás, amivel pontosan követheted a tempódat. Legyen szó egy laza tekerésről, ez az app mindent rögzít.
-        </p>
+        <p class="subtitle">A pontos, minimalista GPS sebességmérő, ami követi a tempódat.</p>
 
+        <!-- Új V2 Szekció -->
+        <div class="v2-section">
+            <h2>Újdonságok a V2-ben:</h2>
+            <ul class="features">
+                <li>Kétnyelvű támogatás (Magyar/English)</li>
+                <li>Teljes körű Odometer (Összesített távolság)</li>
+                <li>"Aktuális út" (This session) számláló</li>
+                <li>Biztonsági megerősítés mérés leállításánál és nullázásnál</li>
+                <li>Optimalizált sötét mód és navigációs sáv kompatibilitás</li>
+                <li>Dinamikus alkalmazásnév (Speedometer/Sebességmérő)</li>
+            </ul>
+        </div>
+
+        <h3>Összes funkció:</h3>
         <ul class="features">
             <li>Valós idejű sebességmérés (km/h és mph)</li>
-            <li>Maximum és átlagsebesség statisztikák</li>
-            <li>Minimalista, sötét-világos dizájn</li>
-            <li>Nincsenek felesleges reklámok, csak a tiszta adatok</li>
+            <li>Statisztika: Max és átlagsebesség</li>
+            <li>Statisztika: Aktuális és összesített távolság</li>
+            <li>Minimalista, rendszer-kompatibilis dizájn</li>
+            <li>Nincsenek reklámok</li>
         </ul>
 
-        <a href="https://github.com/MCI49312/speedometer/releases/download/latest/speedometer.apk" target="_blank" class="download-btn">
-            Letöltés GitHubról
+        <a href="https://github.com/MCI49312/speedometer/releases/download/latest/speedometer_v2.apk" target="_blank" class="download-btn">
+            Letöltés (V2)
         </a>
-    </div>
 
-    <div class="footer">
-        <p>Készült Android Studióban, Kotlin nyelv használatával.</p>
+        <div class="footer">
+            <p>Készült Kotlinban, Android Studio környezetben.</p>
+        </div>
     </div>
 
 </body>
