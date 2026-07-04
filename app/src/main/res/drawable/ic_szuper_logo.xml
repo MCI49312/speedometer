@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Külső ív (sebességmérő kerete) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#333333"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M 4 18 A 8 8 0 1 1 20 18" />
+
+    <!-- Mutató (zöld) -->
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M 12 18 L 17 11" />
+
+    <!-- Középső pötty (Javítva) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M 12,16 a 2,2 0 1,0 0,4 a 2,2 0 1,0 0,-4" />
+</vector>

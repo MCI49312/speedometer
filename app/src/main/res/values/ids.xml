@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvCurrentSpeed" type="id" />
+    <item name="tvUnit" type="id" />
+    <item name="rgUnit" type="id" />
+    <item name="rbKmh" type="id" />
+    <item name="rbMph" type="id" />
+    <item name="tvMaxSpeed" type="id" />
+    <item name="tvAvgSpeed" type="id" />
+    <item name="btnStartStop" type="id" />
+</resources>

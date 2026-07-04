@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Felső sor Vissza gombbal -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="24dp">
+
+        <Button
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt; Vissza"
+            android:backgroundTint="#888888" />
+
+        <TextView
+            android:id="@+id/tvSettingsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beállítások"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:textColor="?android:attr/textColorPrimary"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvLanguageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nyelv / Language"
+        android:textSize="18sp"
+        android:textColor="?android:attr/textColorPrimary"/>
+
+    <RadioGroup
+        android:id="@+id/rgLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+        <RadioButton android:id="@+id/rbHu" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Magyar" />
+        <RadioButton android:id="@+id/rbEn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="English" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvUnitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mértékegység"
+        android:textSize="18sp"
+        android:textColor="?android:attr/textColorPrimary"/>
+
+    <RadioGroup
+        android:id="@+id/rgUnit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+        <RadioButton android:id="@+id/rbKmh" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="km/h" />
+        <RadioButton android:id="@+id/rbMph" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="mph" />
+    </RadioGroup>
+
+    <!-- Odometer Reset -->
+    <Button
+        android:id="@+id/btnResetOdometer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Odometer Nullázása"
+        android:backgroundTint="#F44336" />
+
+</LinearLayout>
