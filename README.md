@@ -33,3 +33,18 @@ This application is built natively for Android using **Kotlin** and **Android St
 1. Clone this repository:
    ```bash
    git clone [https://github.com/MCI49312/speedometer.git](https://github.com/MCI49312/speedometer.git)
+2. Open the project in **Android Studio**.
+3. Allow Gradle to sync and download the necessary dependencies.
+4. Connect your Android device or start an emulator.
+5. Click **Run** to build and deploy the application.
+
+## 🔒 Permissions Required
+
+* `ACCESS_FINE_LOCATION` / `ACCESS_COARSE_LOCATION`: Required to calculate your speed and distance using GPS hardware. 
+* *The app does not collect, store, or share your location data externally. All data is saved locally on your device.*
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE). You are free to copy, modify, and use it in your own projects.
+   
+This is my first project. Gemini helped me with some parts of the code.
