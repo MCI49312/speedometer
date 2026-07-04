@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedometer App</title>
+    <style>
+        /* Alapvető beállítások */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Nyelvváltó */
+        .lang-switch {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-weight: bold;
+        }
+        .lang-switch a {
+            text-decoration: none;
+            color: #4CAF50;
+            padding: 0 5px;
+        }
+        .lang-switch a:hover {
+            text-decoration: underline;
+        }
+
+        /* Fejléc és fő tartalom */
+        .container {
+            max-width: 800px;
+            width: 90%;
+            margin-top: 80px;
+            text-align: center;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Lenyitható menük */
+        details {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px auto;
+            text-align: left;
+            max-width: 400px;
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: bold;
+            font-size: 1.1em;
+            outline: none;
+        }
+
+        details ul {
+            margin-top: 10px;
+            padding-left: 20px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Tulajdonságok listája */
+        .features {
+            text-align: left;
+            margin: 0 auto 30px auto;
+            max-width: 400px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding: 0;
+        }
+
+        .features li {
+            list-style-type: none;
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+
+        .features li::before {
+            content: "✔️";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #4CAF50;
+        }
+
+        /* Letöltés gomb */
+        .download-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            padding: 16px 32px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            margin-bottom: 10px;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* Lábjegyzet */
+        .footer {
+            margin-top: 40px;
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="lang-switch">
+        <a href="index.html">HU</a> | <a href="index_en.html">EN</a>
+    </div>
+
+    <div class="container">
+        <div style="font-size: 60px; margin-bottom: -10px;">⏱️</div>
+        
+        <h1>Speedometer App</h1>
+        <p class="subtitle">
+            A clean, GPS-based Android application to accurately track your pace. Whether it's a casual ride, this app records everything.
+        </p>
+
+        <!-- Changelog -->
+        <details>
+            <summary>Changelog</summary>
+            <ul>
+                <li><strong>V2 features:</strong> Bilingual support, Odometer (current session and total distance), safety confirmation dialogs when stopping or resetting, dynamic app name, optimized navigation bar.</li>
+            </ul>
+        </details>
+
+        <!-- Funkciók listája -->
+        <ul class="features">
+            <li>Real-time speed tracking (km/h and mph)</li>
+            <li>Maximum and average speed statistics</li>
+            <li>Current session and total distance (Odometer)</li>
+            <li>Minimalist, light-dark design</li>
+            <li>No unnecessary ads, just pure data</li>
+        </ul>
+
+        <!-- Letöltés gomb -->
+        <a href="https://github.com/MCI49312/speedometer/releases/download/v2/speedometer_v2.apk" target="_blank" class="download-btn">
+            Download
+        </a>
+
+        <!-- Régi verziók -->
+        <details style="margin-top: 20px;">
+            <summary>Browse old versions</summary>
+            <ul>
+                <li><a href="https://github.com/MCI49312/speedometer/releases/download/v1/speedometer_v1.apk">V1 version (speedometer_v1.apk)</a></li>
+            </ul>
+        </details>
+    </div>
+
+    <div class="footer">
+        <p>Built in Android Studio using Kotlin.</p>
+    </div>
+
+</body>
+</html>
