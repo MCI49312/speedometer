@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,11 +17,7 @@
             align-items: center;
         }
 
-        /* Nyelvváltó logika */
-        body.hu .en { display: none; }
-        body.en .hu { display: none; }
-
-        /* Nyelvváltó gombok stílusa */
+        /* Nyelvváltó */
         .lang-switch {
             position: absolute;
             top: 20px;
@@ -32,13 +28,8 @@
             text-decoration: none;
             color: #4CAF50;
             padding: 0 5px;
-            cursor: pointer;
         }
         .lang-switch a:hover {
-            text-decoration: underline;
-        }
-        .lang-switch a.active {
-            color: #222;
             text-decoration: underline;
         }
 
@@ -67,7 +58,7 @@
             line-height: 1.6;
         }
 
-        /* Menük */
+        /* Lenyitható menük */
         details {
             background-color: #f1f1f1;
             padding: 15px;
@@ -91,7 +82,7 @@
             line-height: 1.6;
         }
 
-        /* Funkciólista */
+        /* Tulajdonságok listája */
         .features {
             text-align: left;
             margin: 0 auto 30px auto;
@@ -143,49 +134,30 @@
         }
     </style>
 </head>
-<!-- Default = en -->
-<body class="en">
+<body>
 
     <div class="lang-switch">
-        <a id="btn-hu" class="active" onclick="setLanguage('hu')">HU</a> | 
-        <a id="btn-en" onclick="setLanguage('en')">EN</a>
+        <a href="index.html">HU</a> | <a href="index_en.html">EN</a>
     </div>
 
     <div class="container">
         <div style="font-size: 60px; margin-bottom: -10px;">⏱️</div>
         
-        <!-- Címek -->
-        <h1 class="hu">Sebességmérő App</h1>
-        <h1 class="en">Speedometer App</h1>
-
-        <p class="subtitle hu">
-            Egy letisztult, GPS-alapú Android alkalmazás, amivel pontosan követheted a tempódat. Legyen szó egy laza tekerésről, ez az app mindent rögzít.
-        </p>
-        <p class="subtitle en">
+        <h1>Speedometer App</h1>
+        <p class="subtitle">
             A clean, GPS-based Android application to accurately track your pace. Whether it's a casual ride, this app records everything.
         </p>
 
         <!-- Changelog -->
         <details>
-            <summary class="hu">Verziótörténet (Changelog)</summary>
-            <summary class="en">Changelog</summary>
+            <summary>Changelog</summary>
             <ul>
-                <li class="hu"><strong>V2 funkciók:</strong> Kétnyelvű támogatás, Odometer (aktuális út és összesített távolság), biztonsági megerősítő ablakok mérés leállításánál és nullázásnál, dinamikus alkalmazásnév, optimalizált navigációs sáv.</li>
-                <li class="en"><strong>V2 features:</strong> Bilingual support, Odometer (current session and total distance), safety confirmation dialogs when stopping or resetting, dynamic app name, optimized navigation bar.</li>
+                <li><strong>V2 features:</strong> Bilingual support, Odometer (current session and total distance), safety confirmation dialogs when stopping or resetting, dynamic app name, optimized navigation bar.</li>
             </ul>
         </details>
 
         <!-- Funkciók listája -->
-        <ul class="features hu">
-            <li>Ingyenes és nyílt forráskódú (Open Source)</li>
-            <li>Valós idejű sebességmérés (km/h és mph)</li>
-            <li>Maximum és átlagsebesség statisztikák</li>
-            <li>Aktuális út és összesített távolság (Odometer)</li>
-            <li>Minimalista, sötét-világos dizájn</li>
-            <li>Nincsenek felesleges reklámok, csak a tiszta adatok</li>
-        </ul>
-        <ul class="features en">
-            <li>Free and Open Source</li>
+        <ul class="features">
             <li>Real-time speed tracking (km/h and mph)</li>
             <li>Maximum and average speed statistics</li>
             <li>Current session and total distance (Odometer)</li>
@@ -194,37 +166,25 @@
         </ul>
 
         <!-- Letöltés gomb -->
-        <a href="https://github.com/MCI49312/speedometer/releases/download/v2/speedometer_v2.apk" target="_blank" class="download-btn hu">Letöltés</a>
-        <a href="https://github.com/MCI49312/speedometer/releases/download/v2/speedometer_v2.apk" target="_blank" class="download-btn en">Download</a>
+        <a href="https://github.com/MCI49312/speedometer/releases/download/v2/speedometer_v2.apk" target="_blank" class="download-btn">
+            Download
+        </a>
+         <a href="https://github.com/MCI49312/speedometer" target="_blank" class="download-btn">
+            View source code on Github
+        </a>
 
         <!-- Régi verziók -->
         <details style="margin-top: 20px;">
-            <summary class="hu">Régi verziók böngészése</summary>
-            <summary class="en">Browse old versions</summary>
+            <summary>Browse old versions</summary>
             <ul>
-                <li class="hu"><a href="https://github.com/MCI49312/speedometer/releases/download/v1/speedometer_v1.apk">V1 verzió (speedometer_v1.apk)</a></li>
-                <li class="en"><a href="https://github.com/MCI49312/speedometer/releases/download/v1/speedometer_v1.apk">V1 version (speedometer_v1.apk)</a></li>
+                <li><a href="https://github.com/MCI49312/speedometer/releases/download/v1/speedometer_v1.apk">V1 version (speedometer_v1.apk)</a></li>
             </ul>
         </details>
     </div>
 
     <div class="footer">
-        <p class="hu">Készült Android Studióban, Kotlin nyelv használatával.</p>
-        <p class="en">Built in Android Studio using Kotlin.</p>
+        <p>Built in Android Studio using Kotlin.</p>
     </div>
 
-    <!-- JavaScript for language switcher -->
-    <script>
-        function setLanguage(lang) {
-            // Body class settings
-            document.body.className = lang;
-            
-            // Buttons style
-            document.getElementById('btn-hu').classList.remove('active');
-            document.getElementById('btn-en').classList.remove('active');
-            document.getElementById('btn-' + lang).classList.add('active');
-        }
-    </script>
-
 </body>
-</html> 
+</html>
